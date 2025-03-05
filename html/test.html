@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Trabajos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            width: 90%;
+        }
+        .card {
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .card img {
+            width: 40%;
+            object-fit: cover;
+        }
+        .card .info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .card h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .card p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .card .details {
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="card">
+            <img src="/img/casa.jpg" alt="Proyecto 1">
+            <div class="info">
+                <h3>Proyecto 1</h3>
+                <p>Construcción de viviendas modernas en zona urbana.</p>
+                <p class="details">Cliente: XYZ Constructora</p>
+                <p class="details">Fecha: Marzo 2023</p>
+                <p class="details">Ubicación: Ciudad Central</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="Proyecto 2">
+            <div class="info">
+                <h3>Proyecto 2</h3>
+                <p>Remodelación y ampliación de edificio corporativo.</p>
+                <p class="details">Cliente: ABC Inversiones</p>
+                <p class="details">Fecha: Julio 2022</p>
+                <p class="details">Ubicación: Zona Financiera</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="Proyecto 3">
+            <div class="info">
+                <h3>Proyecto 3</h3>
+                <p>Diseño y construcción de un complejo turístico.</p>
+                <p class="details">Cliente: Resort Paraíso</p>
+                <p class="details">Fecha: Enero 2024</p>
+                <p class="details">Ubicación: Costa del Sol</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

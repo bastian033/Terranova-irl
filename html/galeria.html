@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Proyectos</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/galeria.css">
+    
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/e2b2db5bc8.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/svg+xml" href="/img/camera-retro.svg">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+ <!-- Botón para abrir el menú en móviles -->
+ <button class="menu-toggle" onclick="toggleMenu()">☰ Categorías</button>
+
+ <!-- Menú lateral -->
+ <div class="sidebar" id="sidebar">
+     <h2>Categorías</h2>
+     <ul id="category-list"></ul>
+ </div>
+
+ <!-- Contenido principal -->
+ <div class="content">
+     <h2 id="category-title">Selecciona una categoría</h2>
+     <div id="gallery" class="gallery"></div>
+ </div>
+
+<!-- Modal para la galería -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content" style="background-color: transparent;">
+        <div class="carousel">
+            <button class="prev" onclick="prevImage()">&#10094;</button>
+            <img id="modalImage" src="" alt="">
+            <button class="next" onclick="nextImage()">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/galeria.js"></script>
+
+</body>
+</html>

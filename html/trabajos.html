@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/trabajos.css">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/e2b2db5bc8.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Boton menu pantallas pequeñas -->
+    <button id="menu-toggle" class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <div class="linea">
+        <p></p>
+    </div>
+
+    <!-- Menu lateral -->
+    <div class="sidebar" id="sidebar">
+        <h2>Trabajos</h2>
+        <ul id="trabajos-list"></ul>
+    </div>
+
+    <!-- Contenido -->
+
+    <!-- <div id="contenido">
+        <h2 id="titulo-trabajo">Selecciona un trabajo</h2>
+        <p id="descripcion-trabajo">Aquí aparecerá la información del trabajo seleccionado.</p> 
+        <img id="imagen-trabajo" src="" alt=""/>
+    </div> -->
+
+    <div id="contenido">
+        <div class="card">
+            <img src="" id="imagen-trabajo" class="card-img-top" alt="">
+            <div class="card-body">
+                <h2 id="titulo-trabajo">Selecciona un trabajo</h2>
+                <p id="descripcion-trabajo">Aquí aparecerá la información del trabajo seleccionado.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/trabajos.js"></script>
+</body>
+</html>
