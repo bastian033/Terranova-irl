@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen de Fondo Difuminada</title>
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/e2b2db5bc8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/inicio.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header class="header">
+        <section class="hero ">
+            <div class="carousel1 portada">
+                <img src="/img/cascoblanco.jpg" class="background-image filter active difumina" alt="Menu">
+                <img src="/img/gasfiterf.jpeg" class="background-image filter difumina" alt="Menu">
+                <img src="/img/casacarru.avif" class="background-image filter difumina" alt="Menu"><!--agregar clase filter para darle opacidad-->
+            </div>
+            <div class="menu container content">
+                <a href="#" class="logo-container">
+                    <img src="/img/logotipo.png" alt="Logo">
+                    <span class="logo">Constructora Terranova</span>
+                </a>        
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="">Servicios</a></li>
+                        <li><a href="">Trabajos</a></li>
+                        <li><a href="">Contacto</a></li>
+                        <li><a href="">Carcasas</a></li>
+                        <li><a href="">Seba</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-content container content">
+                <h1 class="activate">Constructora</h1>
+                <h1                 >Gasfiteria</h1>
+                <h1                 >Casas Personalisadas</h1>
+                <h2 class="activate" style="color: rgb(251, 251, 251);">A tu gusto</h2>
+                <h2                  style="color: rgb(251, 251, 251);">dinos</h2>
+                <h2                  style="color: rgb(251, 251, 251);">A tu gusto</h2>
+                <p class="activate">Casas con llave en mano, ¡dinos como la quieres!</p>
+                <p                 >you know</p>
+                <p                 >Casas con llave en mano, ¡dinos como la quieres!</p> 
+                <a href="#" class="btn-1">Ver mas...</a>
+            </div>
+        </section> 
+    </header>
+<!--_____________________________________________________-->
+    <!--__________________________________________-->
+            <!-- Carrusel de tarjetas -->
+
+    <!--_________________________________________-->
+    <section class="hero">
+        <img src="/img/planocasa.jpg" alt="Imagen de fondo" class="background-image">-->
+        
+    </section>
+    <!--__________________________________________-->
+    <section class="hero fondo-section">
+        <img src="/img/fondoyes.jpeg" alt="Imagen de fondo" class="background-image">
+        <div class="container servicios" style="text-align: center;">
+            
+            <div class="services-list">
+                <ul id="services">
+                    <li data-images="'/img/casa.jpg','/img/herramientas.png'">
+                        Construcción casas - llave en mano (Personalizada)
+                    </li>
+                    <li data-images="{% static 'img/piscina.jpg' %},{% static 'img/piscina2.jpg' %}">
+                        Piscinas de hormigón
+                    </li>
+                    <li data-images="{% static 'img/quincho.jpg' %},{% static 'img/quincho.jpg' %}">
+                        Quinchos personalizados, sólidos y ligeros
+                    </li>
+                    <li data-images="{% static 'img/Remodelaciones.jpg' %},{% static 'img/covertizos2.jpg' %}">
+                        Cobertizos - Deck
+                    </li>
+                    <li data-images="{% static 'img/llavemano.jpg' %},{% static 'img/llavemanosinmanos.webp' %}">
+                        Estructuras metálicas
+                    </li>
+                    <li data-images="{% static 'img/noseacuerda.jpg' %},{% static 'img/remodelacion2.jpg' %}">
+                        Remodelaciones
+                    </li>
+                    <li>Instalaciones
+                        <ul class="sublist">
+                            <li class="sublist-item" data-images="{% static 'img/instalacioneselectricas.jpg' %},{% static 'img/instalaciones-electricas2.jpg' %}">
+                                Instalaciones Eléctricas
+                            </li>
+                            <li class="sublist-item" data-images="{% static 'img/gasfiteria.jpg' %},{% static 'img/Gasfiteria2.jpg' %}">
+                                Instalaciones Gasfitería
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="image-container servicios-cont-img">
+                <div class="carousel">
+                    <button id="prevBtn" class="carousel-btn"></button>
+                    <img id="service-image" src="/img/noseacuerda.jpg" alt="Imagen del servicio">
+                    <button id="nextBtn" class="carousel-btn"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero" style="background-color: black;">
+        <div class="carousel-3">
+            <div class="carousel-item">
+                <img src="/img/personalizadaC.jpeg" alt="" class="carousel-3-image">
+                <h2 style="color: white;">Casa Personalizada Cavieres</h2>
+                <p style="color: white;">Casa con diseño personalizado a gusto del cliente, forma de cubo moderno y de madera</p>
+            </div>
+            <div class="carousel-item">
+                <img src="/img/cosinaAme.jpeg" alt="" class="carousel-3-image">
+                <h2 style="color: white;">Cosina American Style Familia Novoa</h2>
+                <p style="color: white;">Cosina americana con estilo de madera, diseño personalizado </p>
+            </div>
+            <div class="carousel-item">
+                <img src="/img/quincho.jpg" alt="" class="carousel-3-image">
+                <h2 style="color: white;">Quinchos Restaurant La Leyenda</h2>
+                <p style="color: white;">Seccion de quinchos para restaurant la leyenda, ubicado en mandinga, con un diseño moderno y estetico</p>
+            </div>
+            <div class="carousel-item">
+                <img src="/img/quincho.jpg" alt="" class="carousel-3-image">
+                <h2 style="color: white;">Quinchos Restaurant La Leyenda</h2>
+                <p style="color: white;">Seccion de quinchos para restaurant la leyenda, ubicado en mandinga, con un diseño moderno y estetico</p>
+            </div>
+            <div class="carousel-item">
+                <img src="/img/quincho.jpg" alt="" class="carousel-3-image">
+                <h2 style="color: white;">Quinchos Restaurant La Leyenda</h2>
+                <p style="color: white;">Seccion de quinchos para restaurant la leyenda, ubicado en mandinga, con un diseño moderno y estetico</p>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button id="prev" onclick="scrollCarousel(-1)">Anterior</button>
+            <button id="next" onclick="scrollCarousel(1)">Siguiente</button>
+        </div>
+    </section>
+    <!-- Footer  -->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="/img/logotipo.png" alt="Logo-footer">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SECCIONES</h2>
+                <br>
+                <p>Servicios</p>
+                <br>
+                <p>Proyectos</p>
+                <br>
+                <p>Nosotros</p>
+                <br>
+                <p>Vision</p>
+                <br>
+                <p>Mision</p>
+                <br>
+                <p>Contactanos</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter "></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 <b>Constructora Terranova</b> - Todos los derechos reservados</small>
+        </div>
+    </footer>
+    <!--Carrusel Tarjetas-->
+    <script src="/javascript/inicio.js"></script>
+    <!-- Swiper JS -->
+    
+</body>
+</html>
