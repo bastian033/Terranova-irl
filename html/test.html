@@ -3,86 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Trabajos</title>
+    <title>Tarjetas con Efecto Hover</title>
     <style>
-        body {
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
+        }
+
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             background-color: #f4f4f4;
         }
-        .gallery {
+
+        .hero {
+            width: 100%;
+            padding: 50px 0;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            max-width: 800px;
-            width: 90%;
+            width: 80%;
+            max-width: 1000px;
         }
+
         .card {
-            display: flex;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            width: 100%;
+            height: 500px;
             overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
         }
+
         .card img {
-            width: 40%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            transition: 0.5s;
         }
-        .card .info {
-            padding: 20px;
+
+        .card:hover img {
+            filter: blur(5px) brightness(0.7);
+        }
+
+        .card-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
         }
-        .card h3 {
-            margin: 0;
-            font-size: 1.5em;
+
+        .card:hover .card-content {
+            opacity: 1;
         }
+
+        .card h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
         .card p {
-            margin: 10px 0;
-            color: #555;
+            font-size: 16px;
         }
-        .card .details {
-            font-size: 0.9em;
-            color: #777;
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* filter: blur(2px); Aplica el efecto de difuminado */
+            z-index: -1;
+            /*opacity: 0.5;/*aplica opacado para la imagen*/
         }
     </style>
 </head>
 <body>
-    <div class="gallery">
-        <div class="card">
-            <img src="/img/casa.jpg" alt="Proyecto 1">
-            <div class="info">
-                <h3>Proyecto 1</h3>
-                <p>Construcción de viviendas modernas en zona urbana.</p>
-                <p class="details">Cliente: XYZ Constructora</p>
-                <p class="details">Fecha: Marzo 2023</p>
-                <p class="details">Ubicación: Ciudad Central</p>
+    <section class="hero" >
+        <img src="/img/fondo4.jpg" alt="Imagen de fondo" class="background-image"><!---->
+
+        <div class="container">
+            <div class="card">
+                <img src="/img/tarjetas4.jpeg" alt="Visión">
+                <div class="card-content">
+                    <h2>Visión</h2>
+                    <p>Nuestra visión es ser líderes en el mercado de la construcción, destacándonos por la entrega de proyectos de excelencia que transformen tanto el entorno urbano como el rural. Buscamos innovar con soluciones constructivas de alta calidad, contribuyendo al bienestar de las personas y al cuidado del medio ambiente.
+                    
+                    Nos esforzamos por ser una empresa de referencia en el sector, creando valor duradero a través de un enfoque sostenible, responsable y comprometido con la mejora continua. Aspiramos a marcar la diferencia en cada proyecto, impulsando el desarrollo de comunidades más seguras, eficientes y armoniosas.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/img/tarjetas3.jpeg" alt="Misión">
+                <div class="card-content">
+                    <h2>Misión</h2>
+                    <p>Nuestra misión es garantizar la satisfacción de nuestros clientes a través de la entrega de proyectos de alta calidad, incorporando innovación y sustentabilidad en cada etapa del proceso. Nos especializamos en desarrollar soluciones constructivas integrales y personalizadas, adaptándonos a las necesidades específicas de cada cliente y asegurando el cumplimiento de los más altos estándares de seguridad y eficiencia.
+                    
+                    Creemos en la mejora continua como pilar fundamental de nuestro trabajo, optimizando cada proyecto con metodologías innovadoras y materiales de vanguardia que permitan un impacto positivo en el entorno. Nuestro compromiso es crear espacios funcionales, seguros y duraderos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images2-mega.cdn.mdstrm.com/meganoticias/2024/12/11/constructora-pide-su-quiebra_469393_1_6759ddfc4693b.jpg?d=1200x675" alt="Historia">
+                <div class="card-content">
+                    <h2>Historia</h2>
+                    <p>Nuestra historia comenzó en 2020 con un propósito claro: brindar soluciones innovadoras y personalizadas para el sector de la construcción. Desde nuestros inicios, nos hemos dedicado a comprender las necesidades de cada cliente, ofreciendo proyectos diseñados a medida que combinan calidad, funcionalidad y creatividad.
+                    
+                    Más que una empresa, somos una comunidad comprometida con el desarrollo sostenible y la excelencia en cada detalle. Creemos en el poder de la construcción para transformar espacios y mejorar la vida de las personas, trabajando siempre con pasión, profesionalismo y un enfoque centrado en la satisfacción de nuestros clientes.</p>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300" alt="Proyecto 2">
-            <div class="info">
-                <h3>Proyecto 2</h3>
-                <p>Remodelación y ampliación de edificio corporativo.</p>
-                <p class="details">Cliente: ABC Inversiones</p>
-                <p class="details">Fecha: Julio 2022</p>
-                <p class="details">Ubicación: Zona Financiera</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300" alt="Proyecto 3">
-            <div class="info">
-                <h3>Proyecto 3</h3>
-                <p>Diseño y construcción de un complejo turístico.</p>
-                <p class="details">Cliente: Resort Paraíso</p>
-                <p class="details">Fecha: Enero 2024</p>
-                <p class="details">Ubicación: Costa del Sol</p>
-            </div>
-        </div>
-    </div>
+    </section>
 </body>
 </html>

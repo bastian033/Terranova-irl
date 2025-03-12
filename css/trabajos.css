@@ -63,19 +63,19 @@ body {
 #sidebar.open {
     left: 0; /* Se muestra al abrir */
 }
-#contenido {
-    margin-left: 250px;
-    padding: 20px;
-    transition: background 0.3s;
-    max-width: 50%;
+
+#contenido{
+    align-items: center;
 }
 
 #contenido img {
-    max-width: 100%;
-    height: auto;
+    max-width: 50%;
+    height: 250px;
     border-radius: 8px;
 }
 
+
+/* LINEA VERTICAL PANTALLAS PEQUEÑAS */
 .linea{
     display: none;
     background-color: #34495e;
@@ -85,6 +85,9 @@ body {
     width: 70px;       /* Grosor de la línea */
     height: 100vh;    /* Ocupa toda la altura de la pantalla */
 }
+
+/* ------------------------------------------ LOGO MENU LATERAL ------------------------------------- */
+
 
 
 /* Responsividad */
@@ -109,4 +112,95 @@ body {
         display: block;
     }
 
+}
+
+/*-------------------------------------- TEST CARRUSEL-------------------------------------------- */
+.carousel-container {
+    position: relative;
+    /* width: 100%; */
+    max-width: 500px; /* Ajusta según el diseño */
+    overflow: hidden;
+    width: max-content;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 70%; /* Para que se muestren 2 imágenes a la vez */
+    flex: 0 0 50%; /* Evita que las imágenes se achiquen */
+    height:max-content;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+
+
+
+/* ----------------------------------------- TEST CONTENIDO ------------------------------------------------*/
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    width: 90%;
+}
+.card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-left: 300px;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    transition: background 0.3s;
+}
+.card img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    
+}
+
+
+.card .info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+.card p {
+    margin: 10px 0;
+    color: #555;
+}
+.card .details {
+    font-size: 1.1em;
+    color: #777;
 }
